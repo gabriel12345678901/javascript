@@ -16,6 +16,8 @@
           //polarArea
           //area
           //marker
+          //pie donut
+pie donut
          $('#resumo').JSC({
           targetElement: 'cc',
           height:320,
