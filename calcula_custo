@@ -1,0 +1,721 @@
+<html>
+<title>
+</title>
+
+<style type="text/css">
+
+   
+#idformulario{
+    position:absolute;
+    left:0.3cm; 
+    margin-top: 0.3em;
+} 
+    
+    
+h3{
+position:absolute;
+padding-top: 5px;
+margin-top:0cm;
+font:  12px Tahoma, Geneva, sans-serif;
+padding-left: 300px;
+    } 
+
+ /*inicio labels ids*/
+ #combustivel {
+ 
+ font: 10px Tahoma, Geneva, sans-serif;
+ padding-left: 60px;
+ padding-top: 5px;
+} 
+
+#conveniencia {
+ 
+ font: 10px Tahoma, Geneva, sans-serif;
+ padding-left: 60px;
+ padding-top: 5px;
+} 
+#resultado {
+ 
+ font: 10px Tahoma, Geneva, sans-serif;
+ padding-left: 30px;
+ padding-top: 5px;
+} 
+ /*fim labels ids*/ 
+    
+
+ body{
+       
+        font: 10px Tahoma, Geneva, sans-serif;
+        background-color: #f8f8f8;
+}
+    
+.boxbg{
+      position:absolute;
+      height: 650px;  
+      width: 900px; 
+      background-color: #f0f0f0;
+      margin-left: 200px;
+     
+}
+ 
+/* inicio box cabeçalho*/    
+.cabecalho{
+       position: absolute;
+       margin-left: 0px;
+       width: 680px;
+       height: 80px; 
+       margin-top: 0px;
+       background-color:#bbb;
+       border-radius:10px 10px 10px 10px;
+       font:  10px Tahoma, Geneva, sans-serif;
+}
+ 
+ h2{
+position:absolute;
+padding-top: 5cm;
+left:7.3cm;
+margin-top:0.5em;
+padding-top: 0cm;
+padding-left: 0cm;
+    }     
+ 
+    h5{
+position:absolute;
+padding-top: 0.75cm;
+left:6.9cm;
+margin-top:0.1em;
+font:  10px Tahoma, Geneva, sans-serif;
+    }    
+    
+ #txtData{
+position:absolute;
+padding-top: 5cm;
+left:23em;
+margin-top:2em;
+padding-top: 0cm;
+padding-left: 0cm; 
+}
+
+#lbData{
+position:absolute;
+padding-top: 5.3cm;
+left:20em;
+margin-top:2em;
+padding-top: 0cm;
+padding-left: 0cm;    
+}
+/* fim box cabeçalho*/  
+
+/* inicio box mid*/  
+.boxmid{
+        position: absolute;
+        margin-left: 17em;
+        width: 680px;
+        height: 450px;
+        margin-top: 3px;
+        background-color: #bbb;
+        border-radius:10px 10px 10px 10px;
+}
+
+#boxprincipal {
+ position: absolute; 
+ //width: 125px;
+ height: 98px;
+ border-top: 5px; 
+ background-color: #aaa;
+ 
+ margin-top:1.6cm;
+ 
+ width: 680px;
+ font: 10px Tahoma, Geneva, sans-serif;
+ //border-radius:10px 10px 10px 10px;
+} 
+
+#boxCombustivel {
+ position: absolute; 
+ //width: 125px;
+ 
+ height: 250px;
+ border-top: 5px; 
+ background-color: #BEBEBE;
+ 
+ margin-top:1.3cm;
+ 
+ width: 235px;
+ font: 10px Tahoma, Geneva, sans-serif;
+ 
+}   
+  
+#boxConveniencia {
+ position: absolute; 
+ //width: 125px;
+ float:left;
+ height: 250px;
+ border-top: 5px; 
+ background-color: #BEBEBE;
+ //margin-left: 1px;
+ margin-top:1.3cm;
+ left:6.25cm;
+ width: 235px;
+ font: 10px Tahoma, Geneva, sans-serif;
+ 
+} 
+
+#boxResultado {
+ position: absolute; 
+ //width: 125px;
+ height: 250px;
+ border-top: 5px; 
+ background-color: #BEBEBE;
+ margin-left: 0.3px;
+ margin-top:1.3cm;
+ left:12.49cm;
+ width: 208px;
+ font: 10px Tahoma, Geneva, sans-serif;
+ 
+} 
+/* fim box mid*/
+
+
+    
+    .header{
+        position: relative;
+        float:top;
+        width: 1000px;
+        //background-color:#BEBEBE;
+        height: 70px;
+                     
+    }
+    
+    
+    
+   
+    .footer{
+        position: absolute;
+        
+        width: 1000px;
+        //background-color: #BEBEBE;
+        height: 70px;
+        margin-top: 12.7cm;
+    }
+    
+ 
+    #lbDesenvolvedor{
+     font: 9px Tahoma, Geneva, sans-serif;  
+     margin-left: 10em;
+    }
+
+
+label{
+    padding-left: 10px;
+}
+
+
+#idcombo{
+ margin-top: 3em;
+ margin-left: 20px;   
+}
+
+
+
+#boxRadio{
+  padding-top: 1em;
+  padding-left: 0.2em;
+  margin-top: 4em;
+  margin-left: 30px;
+  background-color: #BEBEBE;
+  width: 10.9em;
+  height: 7em;
+  border-radius:10px 10px 10px 10px;
+  
+} 
+
+/*inicio links*/
+ul{
+
+  margin:0px;
+  padding:0px;
+  list-style:none;
+  margin-left: 30px;
+  right:0px;
+  left:0px;
+  width:81px;
+  font:bold 13px Tahoma, Geneva, sans-serif;
+  margin-top: 1em;
+}
+
+ul li{
+   position:relative;
+}
+
+li ul{
+    font:bold 13px Tahoma, Geneva, sans-serif;  
+    position:absolute;
+    left:82px;
+    top:2px;
+    display:none;
+    margin-left:2em;
+    margin-top:3px;
+}
+
+ul li a{
+    
+    font:bold 13px Tahoma, Geneva, sans-serif;
+    color:#ffffff;
+    background:#BEBEBE;
+    border:1px solid #ffffff;  
+    
+    border-radius:10px 10px 10px 10px;
+    display:block;
+    width:80px;
+    padding:9px;
+    border:3px;
+    border-bottom: 0;
+    
+    text-shadow:0px -1px 1px #222222;
+    box-shadow:1px 1px 4px #000000;
+
+    padding:8px 15px;
+    padding-left: 1em;
+    padding-top: 1em;//esse
+    //cursor:pointer;
+    
+    margin-top: 0.4em;
+    top:15px;
+
+
+}
+
+
+a:link, a:visited,a:active {
+	text-decoration: none
+        
+	}
+
+  
+a:hover {
+	text-decoration: underline; 
+	//color: yellow;
+        font-size: 105%;
+        
+	}
+
+
+
+li:hover ul{
+   display:block;
+}
+
+
+/*fim links*/
+
+
+</style>
+
+
+
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+      
+            <title>Indices</title>
+            <link rel="stylesheet" href="meucss.css">
+
+
+        <script type="text/javascript">
+      
+    function data(){
+        var agora= new Date();
+        agora.setDate();
+        document.getElementById("data1").value=Date();
+       
+    }
+   
+    function dataHora(){
+        //var horario = new Date();
+        
+        setTimeout("dataHora()",1000);
+        document.getElementById("txtData").value=Date();
+    
+    }
+    
+    function limparComb(){
+        
+        var lv="";
+        document.getElementById("lt").value=lv;
+        document.getElementById("custoComb").value=lv;
+        document.getElementById("receitaComb").value=lv;
+        document.getElementById("lucroComb").value=lv;
+        document.getElementById("lucroLt").value=lv;
+        document.getElementById("custoLt").value=lv;
+        
+        
+        }
+        
+        function limparLj(){
+        
+        var lv="";
+        document.getElementById("custoLj").value=lv;
+        document.getElementById("receitaLj").value=lv;
+        document.getElementById("lucroLj").value=lv;
+        document.getElementById("lucroUnLj").value=lv;
+        document.getElementById("custoUnLj").value=lv;
+        
+               
+        }
+    
+    function limparResultado(){
+        
+        var lv="";
+      
+        document.getElementById("projecaoR").value=lv;
+        document.getElementById("projecaoLt").value=lv;
+        document.getElementById("projecaoLj").value=lv;
+        document.getElementById("resultadoRedeBox").value=lv;
+        document.getElementById("despesa").value=lv;
+        }
+    
+    function limparResultadoGeral(){
+       var lv="";
+       document.getElementById("resultadoBB").value=lv;
+       document.getElementById("resultadoMAC").value=lv;
+       document.getElementById("resultadoInt").value=lv; 
+       document.getElementById("resultadoNH").value=lv;
+       document.getElementById("resultadoTotal").value=lv;
+    }
+    
+    function somarValoresComb(){
+        
+        //variaveis recebem valores digitados
+        var lt = document.getElementById("lt").value;
+        var custoComb = document.getElementById("custoComb").value;
+        var lucroComb = document.getElementById("lucroComb").value;
+        var custoLt = parseInt(custoComb) / parseInt(lt);
+        document.getElementById("custoLt").value=custoLt;
+        
+        }
+        
+        function somarValoresLj(){
+        
+        
+        //variaveis recebem valores digitados
+        var custoLj = document.getElementById("custoLj").value;
+        var receitaLj = document.getElementById("receitaLj").value;
+        var lucroLj = document.getElementById("lucroLj").value;
+        
+        var lucroUnLj = parseInt(lucroLj) / parseInt(receitaLj);
+        var custoUnLj = parseInt(custoLj) / parseInt(receitaLj);
+       
+        document.getElementById("lucroUnLj").value=lucroUnLj;
+        document.getElementById("custoUnLj").value=custoUnLj;
+        
+        }
+        
+        function selecionarServico(){
+        
+        var selecao=document.getElementById("idcomboServico").value;
+       
+         switch(selecao){
+             
+             
+            case "0":document.getElementById("despesa").value="";
+              break;
+            
+             case "1":document.getElementById("despesa").value=despBB;
+              break;
+             case "2":document.getElementById("despesa").value=despMAC;  
+              break;
+             case "3":document.getElementById("despesa").value=despInt;
+              break;
+             case "4":document.getElementById("despesa").value=despNH;
+                 
+         }
+         
+       }
+   
+        function selecionarDespesa(){
+        
+        
+         var selecao=document.getElementById("idcombo").value;
+       
+        var despBB=parseInt(565335.71);
+        var despMAC=parseInt(455343.25);
+        var despInt=parseInt(59777.91);
+        var despNH=parseInt(114681.00);
+        var semProjecao="Sem projeção";
+         switch(selecao){
+             
+             
+            case "0":document.getElementById("despesa").value="";
+              break;
+            
+             case "1":document.getElementById("despesa").value=despBB;
+              break;
+             case "2":document.getElementById("despesa").value=despMAC;  
+              break;
+             case "3":document.getElementById("despesa").value=despInt;
+              break;
+             case "4":document.getElementById("despesa").value=despNH;
+                 
+         }
+         
+       }
+       
+       function somarValoresResultado(){
+         var dataAtual= new Date();
+         var dia=dataAtual.getDate();
+         var diaFimMes=30;
+         var faltamDias=diaFimMes-dia; 
+         
+         //correção caso faltem 0 dias.
+         switch(faltamDias){
+             case 0:faltamDias=1;
+         }
+         
+         var selecao=document.getElementById("idcombo").value;
+        
+         
+         var lucroPorLitro=document.getElementById("lucroLt").value;
+         var lt=document.getElementById("lt").value;
+         var lucroComb=document.getElementById("lucroComb").value;
+         var lucroLj=document.getElementById("lucroLj").value;  
+         var despesa=document.getElementById("despesa").value;
+         alert(despesa);
+         var projecaoLt=parseInt(lt) / parseInt(dia) * parseInt(faltamDias) + parseInt(lt);
+         var projecaoR=parseInt(lucroComb)/ parseInt(dia) * parseInt(faltamDias) + parseInt(lucroComb);
+         var projecaoLj=parseInt(lucroLj) / parseInt(dia) * parseInt(faltamDias)+ parseInt(lucroLj);
+         var resultadoValor= parseInt(projecaoLj) + parseInt(projecaoR) - parseInt(despesa); 
+         
+         document.getElementById("projecaoR").value=projecaoR;
+         document.getElementById("projecaoLt").value=projecaoLt;
+         document.getElementById("projecaoLj").value=projecaoLj;
+         document.getElementById("resultadoRedeBox").value=resultadoValor;
+        
+        
+        switch(selecao){
+             
+             
+            case "0":
+                document.getElementById("despesa").value="";
+              break;
+            
+             case "1":var resultadoBB=document.getElementById("resultadoRedeBox").value;
+                          document.getElementById("resultadoBB").value=resultadoBB;
+              break;
+             case "2":var resultadoMAC=document.getElementById("resultadoRedeBox").value;
+                          document.getElementById("resultadoMAC").value=resultadoMAC;
+              break;
+             case "3":var resultadoInt=document.getElementById("resultadoRedeBox").value;
+                          document.getElementById("resultadoInt").value=resultadoInt;
+              break;
+             case "4":var resultadoNH=document.getElementById("resultadoRedeBox").value;
+                          document.getElementById("resultadoNH").value=resultadoNH;
+                 
+         }
+       
+    }  
+  
+      
+function escolhaprop(form3) { 
+  
+  if (form3.escolha[1].checked) {
+      document.getElementById("despesa").value="";
+      var despesa=document.getElementById("despesa").value;
+      
+  }
+
+} 
+
+function somarResultadoGeral(){
+       var resultadoGeral;
+       var valorBB=document.getElementById("resultadoBB").value;
+       var valorMAC=document.getElementById("resultadoMAC").value;
+       var valorInt=document.getElementById("resultadoInt").value; 
+       var valorNH=document.getElementById("resultadoNH").value;
+        
+        resultadoGeral=parseInt(valorBB)+parseInt(valorMAC)+parseInt(valorInt)+parseInt(valorNH);
+        document.getElementById("resultadoTotal").value=resultadoGeral;
+        
+    }
+    
+    </script>
+    </head >
+    
+    <body bgcolor="#E8E8E8" onload="dataHora()">     
+     <div id="boxbg" class="boxbg" >  
+       
+       <div id="header" class="header">
+         header
+    
+        </div>
+         
+       
+         
+         <div class="boxmid" >
+         
+         <div class="cabecalho">
+          <h2>CONTROLADORIA WEB</h2> 
+          
+          <h5>Localizacao: CONTROLADORIA WEB> Projecao</h5><br> <br>
+          <label><font face="tahoma" size="2" id="lbData" >Data:</font></label> 
+          <input disabled="true"id="txtData" type="text" size="19" align="center"/><br><br>
+         </div>   <br><br> 
+             
+        
+             
+             
+         <div align="center"  id="boxprincipal">
+             <h3 id="resultadoGeral">Resultado Geral:</h3><br><br>
+             
+          <label>BB:</label>
+          <input id="resultadoBB" type="text" size="12" disabled="true" />
+         
+          <label>MAC:</label>
+          <input id="resultadoMAC" type="text" size="12" disabled="true" />
+          
+          <label>Int:</label>
+          <input id="resultadoInt" type="text" size="12" disabled="true" />
+         
+          <label>NH:</label>
+          <input id="resultadoNH" type="text" size="12" disabled="true" /><br><br>
+          
+          <label>TOTAL:</label>
+          <input id="resultadoTotal" type="text" size="12" disabled="true" name="resultadoTotal" /> 
+         
+         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+         <button id="CalcularResultadoTotal" onclick="somarResultadoGeral()" >Calcular</button>
+         <button id="limparResultadoTotal" onclick="limparResultadoGeral()">Limpar</button>
+         
+         </div><br><br><br><br><br><br><br><br><br>
+         <div  id="boxCombustivel">
+             <h3 id="combustivel">Combustivel:</h3><br><br>
+             <label id="lbLitragem">Litragem:</label>
+             <input id="lt" type="text" size="10" /><br><br>
+             <label id="LbCusto">Custo:</label>
+             <input id="custoComb" type="text" size="12" name="custoComb"/><br><br>
+             <label id="lbReceita">Receita:</label>
+             <input id="receitaComb" type="text" size="11" name="receitaComb"/><br><br>
+             <label id="lbLucro">Lucro:</label>
+             <input id="lucroComb" type="text" size="12" name="lucroComb" /><br><br>
+       
+             <font size="1" face="tahoma">
+             <label id="lbLucroLitro">Lucro por litro:</label>
+             <input id="lucroLt" type="text" size="10" name="lucroLt"  /><br><br>
+             <label id="lbCustoLitro">Custo por litro:</label>
+             <input id="custoLt" type="text" size="10" name="custoLt" disabled="true"/><br><br>
+        
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <button id="somarComb" onclick="somarValoresComb()"><font size="1" face="tahoma" >Calcular</font></button>
+             <button id="LimparComb" onclick="limparComb()"><font size="1" face="tahoma" >Limpar</font></button>
+             
+             
+         </div>
+         
+         <div id="boxConveniencia">
+             <h3 id="conveniencia">Conveniencia:</h3> <br><br>
+               
+        
+        <label id="lbCustoConv">Custo:</label>
+        <input id="custoLj" type="text" size="12" name="custoLj" /><br><br>
+        <label id="lbReceitaConv">Receita:</label>
+        <input id="receitaLj" type="text" size="11" name="receitaLj"/><br><br>
+        <label id="lbLucroConv">Lucro:</label>
+        <input id="lucroLj" type="text" size="12" name="lucroLj"/><br><br><br><br>
+        
+        <font size="1" face="tahoma">
+        <label id="lbLucroUnConv">Lucro unidade:</label>
+        <input id="lucroUnLj" type="text" size="10" name="lucroUnLj"disabled="true" /><br><br>
+        <label id="lbCustoUnConv">Custo unidade:</label>
+        <input id="custoUnLj" type="text" size="10" name="custoUnLj" disabled="true"/><br><br>
+       
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="somarComb" onclick="somarValoresLj()"><font size="1" face="tahoma" >Calcular</font></button>  
+        <button id="LimparLj" onclick="limparLj()"><font size="1" face="tahoma" >Limpar</font></button>
+
+            
+             
+         </div>
+         
+         <div id="boxResultado">
+             <h3 id="resultado">Resultado rede selecionada:</h3><br><br>  
+                <label>Projecao Comb R$:</label>
+        <input id="projecaoR" type="text" size="7" name="projecaoR" disabled="true"/><br><br>
+        <label>Projecao Litro:</label>
+        <input id="projecaoLt" type="text" size="10" name="projecaoLt" disabled="true" /><br><br> 
+        
+        <label>Projecao Loja R$:</label>
+        <input id="projecaoLj" type="text" size="8" name="projecaoLj" disabled="true"/><br><br>
+        
+        <br><br>
+        <label>Despesa:</label>
+        <input type="text" name="despesa" id="despesa" size="13"  ><br><br> 
+        
+        <label>Resultado:</label>
+        <input type="text" name="resultadoRedeBox" id="resultadoRedeBox" disabled="true" size="12" ><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="somarComb" onclick="somarValoresResultado()"><font size="1" face="tahoma" >Calcular</font></button>  
+        <button id="LimparLj" onclick="limparResultado()"><font size="1" face="tahoma" >Limpar</font></button>
+             
+         </div>
+         
+         </div> 
+          
+      
+         <div  class="footer">
+             <label id="lbDesenvolvedor">Desenvolvedor: Rodrigo Galvao Patriota.  </label>
+         </div> 
+     
+         
+         
+         <div  class="menus">
+         <form name="formulario" id="idformulario">
+                
+                    <select name="combo" id="idcombo" onchange="selecionarDespesa()">
+                 
+                      <option value="0">Selecione a rede</option>
+                      <option value="1">BB</option>
+                      <option value="2">MAC</option>
+                      <option value="3">Int</option>
+                      <option value="4">NH</option>
+                    </select>
+                 
+         </form><br><br><br>
+         
+         <div id="boxRadio">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         Projetar despesa?
+         <form NAME="form3" onchange="escolhaprop(form3)">
+          <input TYPE="radio" NAME="escolha" VALUE="1">sim<BR>
+          <input TYPE="radio" NAME="escolha" VALUE="2">nao<BR> 
+       
+          </form> 
+         </div>
+         
+         <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Distribuidoras</a>
+          <ul>
+          <li><a href="#">Projecao</a></li>
+          <li><a href="#">Indices</a></li>
+          </ul>
+          </li>
+
+          <li><a href="#">Postos</a>
+          <ul>
+          <li><a href="#">Projecao</a></li>
+          <li><a href="#">Indices</a></li>
+          </ul>
+          </li>
+          </ul>
+        </div>
+
+         
+</div>   
+        
+</body>
+</html>
