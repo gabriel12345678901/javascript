@@ -8,9 +8,51 @@ import {Picker} from '@react-native-community/picker';
 //import {img} from './send_image';
 
 // You can import from local files
-import Corn from './components/corn';
-import Cotton from './components/cotton';
-import Cafe from './components/cafe';
+import Home from './views/home';
+import Corn from './views/corn';
+import Cotton from './views/cotton';
+import Cafe from './views/cafe';
+
+const Stack = createStackNavigator();
+
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+       <Stack.Screen name="Home" component={Home} />
+       <Stack.Screen name="Corn" component={Corn} />
+       <Stack.Screen name="Cotton" component={Cotton} />
+       <Stack.Screen name="Cafe" component={Cafe} />
+      </Stack.Navigator>
+
+    </NavigationContainer>
+          
+    
+  );
+}
+
+export default App;
+
+
+
+
+
+//views home
+import * as React from 'react';
+import { Button, View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import * as SQLite from 'expo-sqlite';
+import {Picker} from '@react-native-community/picker';
+//import {img} from './send_image';
+
+// You can import from local files
+import Corn from './corn';
+import Cotton from './cotton';
+import Cafe from './cafe';
+
+
 
 
 function Home({navigation}) {
@@ -44,23 +86,6 @@ function Home({navigation}) {
 
 
 
-const Stack = createStackNavigator();
-
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Cotton" component={Cotton} />
-        <Stack.Screen name="Corn" component={Corn} />
-        <Stack.Screen name="Cafe" component={Cafe} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
-
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -103,32 +128,20 @@ const styles = StyleSheet.create({
     paddingTop:20,
     
     
-  },
-  text_input: {
-    borderColor: 'gray',
-    borderWidth: 2,
-    borderRadius:10,
-    marginBottom:15,
-    height:53
-    
-    
-    
-  },
-
-  picker:{
-    height: 30,
-    width: 200,
-    marginBottom:15
   }
+  
 
   
 
 });
 
-export default App;
+export default Home;
 
 
-//other directory, screen 2
+
+
+
+//views caffe
 import * as React from 'react';
 import { Button, View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -151,27 +164,23 @@ db.transaction(tx =>{
 
 
 
-function Cotton({ navigation }) {
- 
+function Cafe({ navigation }) {
   return (
+   
     <View style={styles.container}>
       
-      <Text style={styles.text_title}>You are in Cotton</Text>
+      <Text style={styles.text_title}>You are in Cafe</Text>
       <Text style={styles.text}>Input your ID:</Text>
-      <TextInput  style={styles.text_input} id='cotton_id'></TextInput>
+      <TextInput style={styles.text_input} id='cafe_id'></TextInput>
       <Text style={styles.text}>Input value por kg:</Text>
-      <TextInput  style={styles.text_input} id='cotton_kg'></TextInput>
-      <TouchableOpacity  style={styles.botao}  onPress={() =>
-       alert('version: '+vs+' select: '+db.transaction(tx => {
-         tx.executeSql('SELECT * from cliente where status = ativo')
-       }))
-        
-       }>
+      <TextInput  style={styles.text_input} id='cafe_kg'></TextInput>
+      
+      <TouchableOpacity  style={styles.botao}  onPress={() => alert('send price Cafe')}>
         <Text style={styles.text_button}>Send value</Text>
       </TouchableOpacity>
 
       <Text style={styles.text}>Go to Home</Text>
-     <TouchableOpacity  style={styles.botao}  onPress={() => navigation.navigate('Home')}>
+      <TouchableOpacity  style={styles.botao}  onPress={() => navigation.navigate('Home')}>
         <Text style={styles.text_button}>Home</Text>
       </TouchableOpacity>
       
@@ -179,7 +188,6 @@ function Cotton({ navigation }) {
     </View>
   );
 }
-
 
 
 
@@ -245,18 +253,47 @@ const styles = StyleSheet.create({
     
   }
 
- 
+  
 
   
 
 });
 
-export default Cotton;
+export default Cafe;
 
 
 
 
 
-
-
-
+//package json
+{
+  "dependencies": {
+    "jest": "^26.4.2",
+    "eslint": "^5.16.0",
+    "lodash": "^4.17.19",
+    "prettier": "^1.18.2",
+    "jest-expo": "^36.0.0",
+    "babel-jest": "^26.3.0",
+    "@babel/core": "^7.0.0",
+    "@types/jest": "^26.0.14",
+    "expo-sqlite": "8.4.0",
+    "babel-eslint": "^10.0.2",
+    "react-native-svg": "9.13.3",
+    "babel-preset-expo": "^8.0.0",
+    "eslint-plugin-react": "^7.14.3",
+    "react-native-screens": "^2.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-flowtype": "^3.12.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "@react-navigation/stack": "5.9.2",
+    "@react-navigation/native": "5.7.5",
+    "react-native-multi-selectbox": "^1.2.4",
+    "@react-native-community/picker": "1.8.0",
+    "react-native-safe-area-context": "^0.6.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "metro-react-native-babel-preset": "^0.63.0",
+    "@react-native-community/masked-view": "^0.1.0",
+    "babel-plugin-transform-remove-console": "^6.9.4"
+  }
+}
